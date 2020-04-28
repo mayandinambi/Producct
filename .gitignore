@@ -17,9 +17,7 @@
 !/log/.keep
 !/tmp/.keep
 
-/node_modules
-/yarn-error.log
-
+# Ignore Byebug command history file.
 .byebug_history
 
 # Ignore Spring files.
@@ -27,6 +25,3 @@
 
 # Ignore uploaded test images.
 /public/uploads
-
-# Ignore application configuration
-/config/application.yml

@@ -1,74 +1,31 @@
-### [![AlexKent](https://user-images.githubusercontent.com/20374208/75432997-f5422100-5957-11ea-87a2-164eb98d83ef.png)](https://www.minepi.com/AlexKent) Support me joining PI Network app with invitation code [AlexKent](https://www.minepi.com/AlexKent) [![AlexKent](https://user-images.githubusercontent.com/20374208/75432997-f5422100-5957-11ea-87a2-164eb98d83ef.png)](https://www.minepi.com/AlexKent)
+# Codefresh example of Ruby on Rails
 
----
+Original version is at 	https://bitbucket.org/railstutorial/sample_app_4th_ed.git
 
-<h3 align="center" > Ruby E-Commerce ( <a href="https://dopeshop.herokuapp.com" target="_blank">Demo</a> )</h3>
-<p align="center">
-💎
-</p>
-<p align="center">
-<sup>
-<b>E-Commerce website i made , it needs a little bit more work but is almost ready . It is also mobile friendly . </b>
-</sup>
-</p>
+It contains
 
----
+ * A Dockerfile
+ * A Codefresh build file
 
 
-#### Warning ( I have disabled Google Cloud Console so some features of the application like ( image loading will not work ) but the code is there :)
+Original readme below
 
-I have added some accounts just for checking , so to log in as admin -> ```admin@dopeshop.com``` and ```123123``` , 
-to log in as ordinary user -> ```noadmin@dopeshop.com``` and ```123123```
+# Ruby on Rails Tutorial sample application
 
-Of course you can create as many ordinary users as you want .
+This is the reference implementation of the sample application for the 4th edition of [*Ruby on Rails Tutorial: Learn Web Development with Rails*](http://www.railstutorial.org/) by [Michael Hartl](http://www.michaelhartl.com/).
 
-## Features
-- **App**
-  - User Authentication using  (BCrypt gem)
-  - ADMIN and User roles 
-  - Products icons saved on Google Cloud or Amazon Cloud
-  - Email Account Activation
-  - Users can follow other users
-  - Twitter like feed mechenism for followers
-  - Beautiful Search Bars
-  - Beautiful Paginations
-  - Users can post articles
-  - Proceed products to cart
-  - Make Orders
-  - Edit , destroy orders (Admin)
-- _**Working on it**_
-  - - Implement State Machine
-  - - Use more Ajax requests
-  - - Implementing tickets
-  - - Implementing shipping
+## License
 
-Images from version V1.0
-
-
-| Home  | Users
-|:-:|:-:|
-| ![First](https://user-images.githubusercontent.com/20374208/40195917-99eec18c-5a17-11e8-9091-75719a991c32.png) | ![Sec](https://user-images.githubusercontent.com/20374208/40195918-9a10a7e8-5a17-11e8-8261-ac945dcba10e.png) |
-
-| Orders  | Articles
-|:-:|:-:|
-| ![First](https://user-images.githubusercontent.com/20374208/34919204-13275106-f968-11e7-9ba3-316eb500e202.png) | ![Sec](https://user-images.githubusercontent.com/20374208/34919221-680184e4-f968-11e7-9878-0a3dd9f3f501.png) |
-
-Cart
-![cart](https://user-images.githubusercontent.com/20374208/40195915-99a80788-5a17-11e8-8a4c-df5a85d829a4.png)
-
----
-
-# Special Thanks on 
-
-[*Ruby on Rails Tutorial:
-Learn Web Development with Rails*](http://www.railstutorial.org/)
-by [Michael Hartl](http://www.michaelhartl.com/).
+All source code in the [Ruby on Rails Tutorial](http://railstutorial.org/) is available jointly under the MIT License and the Beerware License. See [LICENSE.md](LICENSE.md) for details.
 
 ## Getting started
 
 To get started with the app, clone the repo and then install the needed gems:
 
 ```
+$ cd /path/to/repos
+$ git clone https://bitbucket.org/railstutorial/sample_app_4th_ed.git sample_app_reference
+$ cd sample_app_reference
 $ bundle install --without production
 ```
 
@@ -78,7 +35,7 @@ Next, migrate the database:
 $ rails db:migrate
 ```
 
-Finally, run the test suite to verify that everything is working correctly: THE TESTS FAIL (Because i didn't corrected them all loool! )
+Finally, run the test suite to verify that everything is working correctly:
 
 ```
 $ rails test
@@ -89,6 +46,28 @@ If the test suite passes, you'll be ready to run the app in a local server:
 ```
 $ rails server
 ```
+
+To check out the code for a particular chapter, first find the branch name using
+
+```
+$ git branch -a
+```
+
+A branch called `remotes/orgin/foo-bar` can be checked out using `git checkout foo-bar`.
+
+Next, copy the contents of the `Gemfile` using a text editor and then use
+
+```
+$ git checkout chapter-branch-name
+```
+
+to check out the chapter branch. Finally, copy the contents into the `Gemfile` and run
+
+```
+$ bundle update
+```
+
+At this point, the branch should be working. (You have to copy the `Gemfile` contents because it's incredibly hard to keep all branches up-to-date, so only the main one is guaranteed to be current.)
 
 For more information, see the
 [*Ruby on Rails Tutorial* book](http://www.railstutorial.org/book).
